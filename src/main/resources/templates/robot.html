@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Venta de Productos</title>
+<title>Seguridad</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -40,62 +40,22 @@
 	<div class="container-contact100">
 		<div class="wrap-contact100">
 
-			<form class="contact100-form validate-form"
-				th:action="@{/formProducto}" th:object="${producto}">
-				<span class="contact100-form-title"> Ingresar Productos </span> <label
-					class="label-input100" for="first-name">Nombre de Producto
-					*</label>
-				<div class="wrap-input100 validate-input">
-					<input class="input100" type="text" placeholder="Queso"
-						th:field="*{nombre}"> <span th:errors="*{nombre}"
-						style="color: #FF0000"></span>
-				</div>
-				<label class="label-input100" for="message">Descripcion de
-					Producto *</label>
-				<div class="wrap-input100 validate-input">
-					<textarea id="message" class="input100" name="message"
-						placeholder="Mozzarella" th:field="*{descripcion}"></textarea>
-					<span  th:errors="*{descripcion}"
-						style="color: #FF0000"></span>
-				</div>
-
-				<label class="label-input100" for="phone">Precio *</label>
-				<div class="wrap-input100 validate-input">
-					<input class="input100" type="number" placeholder="10.00"
-						th:field="*{precio}"> <span
-						th:errors="*{precio}" style="color: #FF0000"></span>
-				</div>
-
-				<label class="label-input100" for="email">Fecha de
-					Vencimiento *</label>
-				<div class="wrap-input100 validate-input">
-					<input class="input100" type="text" th:field="*{vencimiento}"
-						placeholder="12/06/2020"> <span 
-						th:errors="*{vencimiento}" style="color: #FF0000"></span>
-				</div>
-
+			<form th:action="@{/seguridad}" th:object="${robot}" method="post" class="contact100-form validate-form">
+				<span class="contact100-form-title"> Verificacion de Seguridad 
+				</span> 
+				<label>Marcar solo si eres un robot </label>
+				 <input type="radio"
+					th:field="*{imRobot}" th:value="${false}"> <span
+					th:errors="*{imRobot}" style="color: #FF0000"></span><br>
 
 				<div class="container-contact100-form-btn">
-					<button type="submit" class="contact100-form-btn">Agregar
-						Producto</button>
+					<button type="submit" class="contact100-form-btn">Aceptar</button>
+					 <a href="/producto">Regresar</a>
 				</div>
 			</form>
 
-
 			<div class="contact100-more flex-col-c-m"
-				style="background-image: url('images/bg-01.jpg');">
-				<div class="flex-w size1 p-b-47">
-					<div class="txt1 p-r-25">
-						<span class="lnr lnr-map-marker"></span>
-					</div>
-
-					<div class="flex-col size2">
-						<span class="txt1 p-b-20"> Venta de productos </span>
-					</div>
-				</div>
-
-
-			</div>
+				style="background-image: url('images/robot1.jpg');"></div>
 		</div>
 	</div>
 

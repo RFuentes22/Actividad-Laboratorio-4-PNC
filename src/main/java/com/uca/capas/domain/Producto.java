@@ -9,17 +9,17 @@ import javax.validation.constraints.Size;
 
 public class Producto {
 
-	@Size(message = "El nombre no debe tener mas de 15 caracteres", max = 15)
-	@NotEmpty(message = "Este campo no puede estar vacio")
+	@Size(message = " El nombre no debe tener mas de 15 caracteres", max = 15)
+	@NotEmpty(message = " Este campo no puede estar vacio")
 	private String nombre;
-	@Size(message = "La descripcion no debe tener mas de 30 caracteres", max = 30)
-	@NotEmpty(message = "Este campo no puede estar vacio")
+	@Size(message = " La descripcion no debe tener mas de 30 caracteres", max = 30)
+	@NotEmpty(message = " Este campo no puede estar vacio")
 	private String descripcion;
-	@NotNull(message = "Este campo no puede estar vacio")
-	@Min(value =0,message = "El precio no debe ser negativo")
+	@NotNull(message = " Este campo no puede estar vacio")
+	@Min(value =0,message = " El precio no debe ser negativo")
 	private Double precio;
-	@NotEmpty(message = "Este campo no puede estar vacio")
-	@Pattern(regexp = "^([0-2][0-9]|3[0-1])(\\/)(0[1-9]|1[0-2])(\\/)(\\d{4})$",message = "La Fecha debe ser en formato dd/mm/yyyy")
+	@NotEmpty(message = " Este campo no puede estar vacio")
+	@Pattern(regexp = "^([0-2][0-9]|3[0-1])(\\/)(0[1-9]|1[0-2])(\\/)(\\d{4})$",message = " La Fecha debe ser en formato dd/mm/yyyy")
 	private String vencimiento;
 	
 	
