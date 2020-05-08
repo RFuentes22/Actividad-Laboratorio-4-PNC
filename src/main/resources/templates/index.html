@@ -13,16 +13,16 @@
 			style="color: #FF0000"></span><br>
 
 		<label>Descripcion</label> <input type="text"
-			th:field="*{descripcion}"><br> <span th:errors="*{descripcion}"
+			th:field="*{descripcion}"><span th:errors="*{descripcion}"
 			style="color: #FF0000"></span><br>
 		
 		<label>Precio</label> <input type="number"
-			th:field="*{precio}"> <br><span th:errors="*{precio}"
+			th:field="*{precio}"> <span th:errors="*{precio}"
 			style="color: #FF0000"></span><br>
 		
 		<label>Fecha de vencimiento</label> <input type="text"
-			th:field="*{vencimiento}"><br> <span th:errors="*{vencimiento}"
-			style="color: #FF0000"></span>
+			th:field="*{vencimiento}"> <span th:errors="*{vencimiento}"
+			style="color: #FF0000"></span><br>
 		
 		<input type="submit" value = "Agregar Producto">
 	</form>
